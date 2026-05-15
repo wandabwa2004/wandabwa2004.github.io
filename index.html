@@ -3,13 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Herman Wandabwa | Senior Data & AI Scientist Portfolio</title>
-  <!-- Import Roboto Font from Google Fonts -->
+  <title>Herman Wandabwa | Senior AI Scientist — GenAI & Agentic Systems</title>
+  <meta name="description" content="Dr. Herman Wandabwa — Senior AI Scientist specialising in Generative AI and Agentic Systems. 7+ years translating data science and AI research into production-grade solutions. Based in Melbourne." />
+  <meta name="author" content="Herman Wandabwa" />
+  <meta name="theme-color" content="#0a192f" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Herman Wandabwa | Senior AI Scientist — GenAI & Agentic Systems" />
+  <meta property="og:description" content="Senior AI Scientist specialising in Generative AI and Agentic Systems. 7+ years translating data science and AI research into production-grade solutions." />
+  <meta property="og:image" content="https://wandabwa2004.github.io/herman.jpg" />
+  <meta property="og:url" content="https://wandabwa2004.github.io/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Herman Wandabwa | Senior AI Scientist — GenAI & Agentic Systems" />
+  <meta name="twitter:description" content="Senior AI Scientist specialising in Generative AI and Agentic Systems. 7+ years translating data science and AI research into production-grade solutions." />
+  <meta name="twitter:image" content="https://wandabwa2004.github.io/herman.jpg" />
+
+  <link rel="icon" type="image/jpeg" href="herman.jpg" />
+
+  <!-- Fonts & libraries -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Structured data: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Herman Wandabwa",
+    "jobTitle": "Senior AI Scientist — GenAI & Agentic Systems",
+    "url": "https://wandabwa2004.github.io/",
+    "image": "https://wandabwa2004.github.io/herman.jpg",
+    "email": "mailto:wandabwa2004@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Melbourne",
+      "addressCountry": "Australia"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Auckland University of Technology"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/wandabwaherman/",
+      "https://github.com/wandabwa2004",
+      "https://hermanwandabwa.medium.com/",
+      "https://scholar.google.com/citations?user=0iEgEHYAAAAJ"
+    ]
+  }
+  </script>
   <style>
     /* Global Styles */
     :root {
@@ -92,7 +140,7 @@
       transition: var(--transition);
     }
     .btn:hover {
-      background: rgba(100, 255, 218, 0.1);
+      background: rgba(100, 117, 255, 0.12);
       color: var(--accent-color);
     }
     .btn-filled {
@@ -215,7 +263,7 @@
       border-radius: 50%;
       background: linear-gradient(45deg, var(--accent-color), var(--accent-secondary), var(--accent-tertiary));
       opacity: 0.3;
-      animation: rotate 10s linear infinite;
+      animation: rotate 30s linear infinite;
     }
     @keyframes rotate {
       0% { transform: translateX(-50%) rotate(0deg); }
@@ -338,31 +386,88 @@
     .timeline-content p {
       color: var(--text-secondary);
     }
-    /* Skills Section */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 20px;
+    .role-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    .skill-card {
-      text-align: center;
-      padding: 20px;
-      background-color: var(--secondary-bg);
-      border-radius: 8px;
-      transition: var(--transition);
+    .role-bullets li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 10px;
+      color: var(--text-secondary);
     }
-    .skill-card:hover {
-      transform: translateY(-5px);
-      background-color: rgba(100, 255, 218, 0.1);
+    .role-bullets li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-color);
     }
-    .skill-card i {
-      font-size: 36px;
+    .role-bullets li strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+    .role-bullets li em {
+      color: var(--accent-color);
+      font-style: italic;
+    }
+    .role-bullets + .bullet-subhead {
+      margin-top: 18px;
+    }
+    .bullet-subhead {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
       color: var(--accent-color);
       margin-bottom: 10px;
     }
-    .skill-card h4 {
-      font-size: 16px;
-      margin-bottom: 0;
+    /* Skills Section */
+    .skills-groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 25px;
+    }
+    .skill-group {
+      background-color: var(--secondary-bg);
+      border-radius: 8px;
+      padding: 25px;
+      transition: var(--transition);
+    }
+    .skill-group:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    .skill-group-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(100, 117, 255, 0.2);
+    }
+    .skill-group-header i {
+      font-size: 22px;
+      color: var(--accent-color);
+    }
+    .skill-group-header h3 {
+      font-size: 17px;
+      color: var(--text-primary);
+      margin: 0;
+    }
+    .skill-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skill-chip {
+      font-size: 12px;
+      padding: 5px 12px;
+      background: rgba(100, 117, 255, 0.12);
+      color: var(--accent-color);
+      border-radius: 12px;
+      font-weight: 500;
     }
     /* Projects Section */
     .projects-grid {
@@ -410,7 +515,7 @@
     .project-tag {
       font-size: 12px;
       padding: 4px 8px;
-      background-color: rgba(100, 255, 218, 0.1);
+      background-color: rgba(100, 117, 255, 0.12);
       color: var(--accent-color);
       border-radius: 4px;
     }
@@ -421,7 +526,45 @@
     .project-links a {
       font-size: 20px;
     }
+    .project-note {
+      font-size: 13px;
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-top: 5px;
+    }
+    .project-note i {
+      color: var(--accent-color);
+      margin-right: 6px;
+    }
     /* Articles Section */
+    .article-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .filter-btn {
+      padding: 8px 18px;
+      background: transparent;
+      border: 1px solid var(--text-secondary);
+      border-radius: 20px;
+      color: var(--text-secondary);
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-btn:hover {
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+    .filter-btn.active {
+      background: var(--accent-color);
+      color: var(--primary-bg);
+      border-color: var(--accent-color);
+    }
     .articles-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -432,6 +575,27 @@
       border-radius: 8px;
       padding: 20px;
       transition: var(--transition);
+    }
+    .article-card.is-hidden {
+      display: none;
+    }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--accent-color);
+      background: rgba(100, 117, 255, 0.12);
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+    .articles-empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      color: var(--text-secondary);
+      font-style: italic;
+      padding: 30px 0;
     }
     .article-card:hover {
       transform: translateY(-10px);
@@ -451,16 +615,47 @@
       color: var(--accent-tertiary);
     }
     /* Publications Section */
+    .publications-subhead {
+      font-size: 18px;
+      color: var(--text-primary);
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(100, 117, 255, 0.2);
+    }
     .publications-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
       gap: 30px;
+      margin-bottom: 30px;
     }
     .publication-card {
       background-color: var(--secondary-bg);
       border-radius: 8px;
       padding: 20px;
       transition: var(--transition);
+    }
+    .pub-status {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--accent-color);
+      background: rgba(100, 117, 255, 0.12);
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+    .pub-status--review {
+      color: var(--accent-tertiary);
+      background: rgba(255, 94, 125, 0.12);
+    }
+    .pub-citation {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      line-height: 1.5;
     }
     .publication-card:hover {
       transform: translateY(-10px);
@@ -485,32 +680,22 @@
       grid-template-columns: 1fr 1fr;
       gap: 50px;
     }
-    .contact-form {
+    .contact-cta {
       background-color: var(--secondary-bg);
       padding: 30px;
       border-radius: 8px;
+      align-self: start;
     }
-    .form-group {
-      margin-bottom: 20px;
+    .contact-cta h3 {
+      color: var(--accent-color);
+      margin-bottom: 15px;
     }
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-      color: var(--text-primary);
+    .contact-cta p {
+      color: var(--text-secondary);
+      margin-bottom: 25px;
     }
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 10px;
-      background-color: var(--primary-bg);
-      border: 1px solid var(--text-secondary);
-      border-radius: 4px;
-      color: var(--text-primary);
-      font-family: var(--font-sans);
-    }
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
+    .contact-cta .btn i {
+      margin-right: 8px;
     }
     .contact-info {
       background-color: var(--secondary-bg);
@@ -575,6 +760,7 @@
       height: 50px;
       background-color: var(--accent-color);
       color: var(--primary-bg);
+      border: none;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -666,8 +852,8 @@
         width: 240px;
         height: 240px;
       }
-      .skills-grid {
-        grid-template-columns: 1fr 1fr;
+      .skills-groups {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -688,8 +874,8 @@
           <li><a href="#publications">Publications</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="theme-toggle"><i class="fas fa-moon"></i></button>
-        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        <button class="theme-toggle" aria-label="Toggle light/dark mode"><i class="fas fa-moon" aria-hidden="true"></i></button>
+        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"><i class="fas fa-bars" aria-hidden="true"></i></button>
       </nav>
     </div>
   </header>
@@ -701,14 +887,15 @@
         <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
           <div class="tagline">Hello, I'm</div>
           <h1>Dr. Herman Wandabwa</h1>
-          <p>Senior Data & AI Scientist specializing in Responsible AI & Advanced Analytics for highly regulated financial services</p>
+          <p>Senior AI Scientist specialising in <strong>Generative AI</strong> and <strong>Agentic Systems</strong>. 7+ years translating data science and AI research into production-grade solutions.</p>
           <div class="hero-buttons">
             <a href="#contact" class="btn btn-filled">Get in Touch</a>
-            <a href="#" class="btn" id="download-resume">Download Resume</a>
+            <a href="Resume.pdf" class="btn" download="Herman_Wandabwa_Resume.pdf">Download Resume</a>
           </div>
           <div class="social-icons">
-            <a href="https://github.com/wandabwa2004/DS_Projects" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:herman.wandabwa@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/wandabwaherman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://github.com/wandabwa2004/DS_Projects" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="mailto:wandabwa2004@gmail.com" aria-label="Email Herman"><i class="fas fa-envelope" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
@@ -726,12 +913,11 @@
       <div class="about-content">
         <div class="about-text" data-aos="fade-right" data-aos-duration="1000">
           <p>
-            Results-driven Senior Data & AI Scientist with 7+ years of experience designing innovative AI solutions in highly regulated financial
-            environments, specializing in Responsible AI governance, GenAI development, and predictive modeling. I excel at transforming
-            complex business challenges into scalable technical implementations while ensuring strict compliance with regulatory
-            requirements. My technical expertise spans Python, SQL, AWS, and large-scale data infrastructure, complemented by strong
-            leadership skills in cross-functional collaboration and driving measurable business impact through data-driven decision-making.   
-          </p>        
+            Senior AI Scientist with a PhD specialising in generative AI and agentic systems, with 7+ years translating research into production. Deep experience in LLM fine-tuning (Qwen, LLaMA), retrieval-augmented generation, and ReAct-style agent orchestration — backed by a strong applied research track record.
+          </p>
+          <p>
+            Rigorous experimental design and statistical validation paired with end-to-end MLOps delivery across financial services, insurance and logistics. Effective communicator with senior stakeholders and a committed mentor of junior data scientists.
+          </p>
         </div>
         <div class="education" data-aos="fade-left" data-aos-duration="1000">
           <h3>Education</h3>
@@ -755,18 +941,19 @@
             <h3>Commonwealth Bank</h3>
             <h4>Senior AI Scientist</h4>
             <span class="date">January 2024 – Present | Melbourne, Australia</span>
-            <p>
-              • Developed an LLM-based NLP pipeline to extract multimodal data and expose it as an API, now integrated in HR systems processing over 6,000+ internal documents—a first-of-its-kind deployment at the bank. Built a robust evaluation pipeline to validate the API performance.<br />
-              • Built uplift models and experimentation pipelines for home loan refinance and council leads targeting, driving $500M in high-confidence revenue opportunities through statistically validated targeting.<br />
-              • Designed NLP-based clustering experiments to expand investor rental leads, achieving a 9% increase in conversions via validated, data-driven segmentation strategies.<br />
-              • Led a cross-functional initiative to launch GenRAIT, a Responsible AI toolkit with reproducible monitoring frameworks for LLMs-as-judges and traditional ML models, enhancing model compliance and interpretability.<br />
-              • Integrated LIT, Langfuse, and Phoenix into CBA’s Responsible AI framework to enable real-time interpretability and model monitoring for GenAI systems.<br />
-              • Developed reproducible ML pipelines with CI/CD and monitoring in AWS, collaborating with engineering to ensure robust and scalable production deployment. <br />
-              • Partnered with product, design, and engineering teams to align data science solutions with business strategy, contributing to intelligent product development.<br />
-              • Mentored junior data scientists across the Data Management, Responsible AI, and AI Labs teams, cultivating expertise in experimentation and ML best practices.<br />
-              • Built and deployed a Home Seeker Disengagement Model to identify customers at risk of dropping off during financing; achieved 11% uplift in customer retention.<br />
-              • Engineered a Spark-based pipeline to transform transactional data into embeddings for use in downstream ML tasks, improving scalability and modeling efficiency.<br />
-            </p>
+            <h5 class="bullet-subhead">Agentic AI &amp; LLM Projects</h5>
+            <ul class="role-bullets">
+              <li>Designed a specialised <strong>Architect Agent</strong> (LangGraph) that translates raw BPMN process definitions into functional ReAct agentic applications, achieving <strong>~40% lower input/output token usage</strong> than Roo Code, Cline, AutoGen, MetaGPT and AFLOW under matched conditions. <em>Paper submitted to ICML 2026.</em></li>
+              <li>Built an end-to-end <strong>Agentic AI Simulator, Evaluator and Mitigator</strong> framework used pre-deployment to diagnose failure modes, assess reliability and target performance improvements for agents serving vulnerable customer populations — informing internal Responsible AI governance.</li>
+              <li>Fine-tuned and evaluated a <strong>Qwen-7B</strong> language model for financial-advice use cases with rigorous experiments on response quality and domain accuracy; produced a reusable evaluation harness for downstream LLM projects.</li>
+            </ul>
+            <h5 class="bullet-subhead">Customer Analytics &amp; Production ML</h5>
+            <ul class="role-bullets">
+              <li>Led customer targeting and segmentation using propensity scoring and behavioural modelling, delivering an <strong>11% uplift in home-loan retention</strong> across a 500K+ customer base.</li>
+              <li>Developed NLP-powered customer clustering for investor rental leads, achieving a <strong>9% conversion increase</strong> through statistically validated segmentation.</li>
+              <li>Engineered scalable Spark pipelines transforming transaction-level data into customer behaviour features for production targeting models, reducing feature build time by <strong>~50%</strong>.</li>
+              <li>Mentored 4+ junior data scientists in problem definition, model development and communication of insights.</li>
+            </ul>
           </div>
         </div>
         <div class="timeline-item" data-aos="fade-left">
@@ -774,13 +961,12 @@
             <h3>Commonwealth Bank</h3>
             <h4>Data Scientist</h4>
             <span class="date">July 2022 – December 2023 | Sydney, Australia</span>
-            <p>
-              • Developed uplift models and churn analysis for migrant customer segments, uncovering key behavioral drivers and guiding retention strategies that reduced attrition by 12% through validated targeting.<br />
-              • Led the modeling and deep-dive analysis of Buy Now Pay Later (BNPL) adoption across customer demographics, directly influencing internal policy and shaping new product initiatives.<br />
-              • Initiated and led self-supervised embedding research, evaluating multiple techniques for generating transaction-level embeddings—now deployed in production systems.<br />
-              • Built multi-objective fraud detection models combining anomaly detection with cost optimization, enabling proactive scam mitigation and delivering $10M in annual savings.<br />
-              • Designed robust model validation frameworks leveraging statistical testing  to ensure generalizability and reliable performance prior to production deployment.<br />
-            </p>
+            <ul class="role-bullets">
+              <li>Pioneered self-supervised embedding techniques for customer transaction profiling, producing reusable features now deployed in <strong>3+ production targeting systems</strong>.</li>
+              <li>Designed a multi-objective optimisation framework for fraud-detection queue management using <strong>beam search</strong>, projecting <strong>$10M</strong> in annual cost savings through improved resource allocation.</li>
+              <li>Developed customer uplift and churn analytics for migrant segments, reducing attrition by <strong>12%</strong> via validated targeting and intervention strategies.</li>
+              <li>Conducted rapid experimentation on Buy Now Pay Later (BNPL) adoption across demographic segments, with findings directly shaping product strategy.</li>
+            </ul>
           </div>
         </div>
         <div class="timeline-item" data-aos="fade-right">
@@ -788,11 +974,10 @@
             <h3>Tower Insurance</h3>
             <h4>Senior Analytics Specialist</h4>
             <span class="date">November 2021 – June 2022 | Auckland, New Zealand</span>
-            <p>
-              • Built churn and uplift models using behavioral segmentation and predictive modeling techniques, identifying high-risk customer segments and increasing member retention by 15% through optimized engagement strategies.<br />
-              • Developed an NLP-powered chatbot to automate internal support workflows, reducing manual query volume by over 40% and improving response efficiency.<br />
-              • Developed Tower’s reporting capability in conjunction with marketing teams, enabling data-driven decision-making across acquisition and retention efforts.<br />
-            </p>
+            <ul class="role-bullets">
+              <li>Built customer churn and uplift models using behavioural segmentation, lifting retention by <strong>15%</strong> and operationalising targeting with marketing teams.</li>
+              <li>Created an NLP-powered automation tool that reduced internal support query volume by <strong>40%</strong>, demonstrating end-to-end prototype-to-production AI deployment.</li>
+            </ul>
           </div>
         </div>
         <div class="timeline-item" data-aos="fade-left">
@@ -800,12 +985,32 @@
             <h3>KiwiRail</h3>
             <h4>Data Science Solutions Specialist</h4>
             <span class="date">November 2020 – November 2021 | Auckland, New Zealand</span>
-            <p>
-               • Built a time series forecasting model in Python to predict customer cover bookings up to one week in advance, enabling better wagon space planning and reducing last-minute service disruptions.<br />
-               • Developed the company’s first predictive model to forecast on-time train performance using operational data, improving scheduling accuracy and contributing to DIFOT (Delivery in Full, On Time) metrics.<br />
-               • Designed and deployed a linear programming model using PuLP and Google OR-Tools to optimize container allocation, accounting for wagon capacity, container type, and shipping cut-off times—boosting operational efficiency by 60%.<br />
-               • Applied NLP techniques to analyze and synthesize incident reports from Line Service Managers, delivering insights that informed policy decisions and operational improvements.
-            </p>
+            <ul class="role-bullets">
+              <li>Designed and deployed a linear-programming model (PuLP + Google OR-Tools) for container allocation across wagon capacity, container type and cut-off times — boosting operational efficiency by <strong>60%</strong>.</li>
+              <li>Built time-series forecasting models for customer booking patterns, improving resource planning and reducing last-minute service disruptions by <strong>~25%</strong>.</li>
+              <li>Developed KiwiRail's first predictive model for on-time train performance, improving scheduling accuracy and lifting <strong>DIFOT</strong> (Delivery in Full, On Time) metrics.</li>
+              <li>Applied NLP to incident reports to surface recurring failure modes, informing operational policy decisions and safety improvements.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-content">
+            <h3>Torrens University &amp; Vision College</h3>
+            <h4>Data Science Content Developer &amp; Software Tutor (Casual)</h4>
+            <span class="date">February 2020 – August 2021 | Adelaide, Australia / Auckland, NZ</span>
+            <ul class="role-bullets">
+              <li>Authored academic content covering Python, NLP, deep learning, computer vision and model deployment for university-level applied data science instruction.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-content">
+            <h3>Dexibit</h3>
+            <h4>Data Scientist</h4>
+            <span class="date">June 2018 – December 2018 | Auckland, New Zealand</span>
+            <ul class="role-bullets">
+              <li>Built time-series forecasting models for museum visitor prediction and applied NLP sentiment analysis, integrating both into Dexibit's production SaaS platform.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -816,51 +1021,92 @@
   <section id="skills" class="technical-skills">
     <div class="container">
       <h2 class="section-title" data-aos="fade-right">Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-          <i class="fas fa-robot"></i>
-          <h4>Generative AI</h4>
-          <p style="font-size: 13px;">LLMs, RAGs & Agents <a href="https://bit.ly/462ck94" target="_blank">(Learn More)</a></p>
+      <div class="skills-groups">
+        <div class="skill-group" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-group-header">
+            <i class="fas fa-robot" aria-hidden="true"></i>
+            <h3>Generative AI &amp; Agentic Systems</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">LLM fine-tuning</span>
+            <span class="skill-chip">Qwen-7B</span>
+            <span class="skill-chip">LLaMA</span>
+            <span class="skill-chip">Prompt engineering</span>
+            <span class="skill-chip">RAG</span>
+            <span class="skill-chip">ReAct agents</span>
+            <span class="skill-chip">Tool-use interfaces</span>
+            <span class="skill-chip">Orchestration logic</span>
+            <span class="skill-chip">Memory systems</span>
+            <span class="skill-chip">Context management</span>
+            <span class="skill-chip">Agentic evaluation</span>
+            <span class="skill-chip">AI risk assessment</span>
+            <span class="skill-chip">Responsible AI</span>
+          </div>
         </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="150">
-          <i class="fab fa-python"></i>
-          <h4>Python</h4>
+        <div class="skill-group" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-group-header">
+            <i class="fas fa-cubes" aria-hidden="true"></i>
+            <h3>LLM Tooling &amp; Frameworks</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">Model Context Protocol (MCP)</span>
+            <span class="skill-chip">LangChain</span>
+            <span class="skill-chip">LangGraph</span>
+            <span class="skill-chip">LlamaIndex</span>
+            <span class="skill-chip">Hugging Face Transformers</span>
+            <span class="skill-chip">PEFT / LoRA</span>
+            <span class="skill-chip">vLLM</span>
+            <span class="skill-chip">FAISS</span>
+          </div>
         </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-          <i class="fas fa-database"></i>
-          <h4>SQL</h4>
+        <div class="skill-group" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-group-header">
+            <i class="fas fa-chart-line" aria-hidden="true"></i>
+            <h3>Machine Learning &amp; Data Science</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">Predictive modelling</span>
+            <span class="skill-chip">Propensity scoring</span>
+            <span class="skill-chip">Uplift modelling</span>
+            <span class="skill-chip">Customer segmentation</span>
+            <span class="skill-chip">Churn analytics</span>
+            <span class="skill-chip">Time-series forecasting</span>
+            <span class="skill-chip">NLP</span>
+            <span class="skill-chip">Embeddings</span>
+            <span class="skill-chip">Self-supervised learning</span>
+            <span class="skill-chip">Mathematical optimisation</span>
+          </div>
         </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="250">
-          <i class="fas fa-bolt"></i>
-          <h4>Spark</h4>
+        <div class="skill-group" data-aos="fade-up" data-aos-delay="400">
+          <div class="skill-group-header">
+            <i class="fas fa-server" aria-hidden="true"></i>
+            <h3>MLOps &amp; Engineering</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">SQL / Snowflake</span>
+            <span class="skill-chip">Spark</span>
+            <span class="skill-chip">AWS</span>
+            <span class="skill-chip">GCP</span>
+            <span class="skill-chip">Azure ML</span>
+            <span class="skill-chip">End-to-end ML lifecycle</span>
+            <span class="skill-chip">Scalable deployment</span>
+            <span class="skill-chip">Feature engineering</span>
+            <span class="skill-chip">Data pipelines</span>
+          </div>
         </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-          <i class="fas fa-snowflake"></i>
-          <h4>Snowflake</h4>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="350">
-          <i class="fab fa-aws"></i>
-          <h4>AWS</h4>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
-          <i class="fas fa-chart-line"></i>
-          <h4>Predictive Modeling</h4>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="450">
-          <i class="fas fa-flask"></i>
-          <h4>Experiment Design</h4>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
-          <i class="fas fa-vials"></i>
-          <h4>Hypothesis Testing</h4>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="550">
-          <i class="fas fa-users"></i>
-          <h4>Project Management</h4>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
-          <i class="fas fa-shield-alt"></i>
-          <h4>Responsible AI</h4>
+        <div class="skill-group" data-aos="fade-up" data-aos-delay="500">
+          <div class="skill-group-header">
+            <i class="fas fa-users" aria-hidden="true"></i>
+            <h3>Leadership &amp; Stakeholder Engagement</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">Mentoring junior data scientists</span>
+            <span class="skill-chip">Code &amp; model reviews</span>
+            <span class="skill-chip">Data storytelling</span>
+            <span class="skill-chip">Translating insights to strategy</span>
+            <span class="skill-chip">Cross-functional collaboration</span>
+          </div>
         </div>
       </div>
     </div>
@@ -885,10 +1131,7 @@
               <span class="project-tag">Monitoring</span>
               <span class="project-tag">Responsible AI</span>
             </div>
-            <div class="project-links">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-            </div>
+            <p class="project-note"><i class="fas fa-lock" aria-hidden="true"></i> Internal work — details on request</p>
           </div>
         </div>
         <div class="project-card" data-aos="fade-up" data-aos-delay="200">
@@ -905,10 +1148,7 @@
               <span class="project-tag">NLP</span>
               <span class="project-tag">Analytics</span>
             </div>
-            <div class="project-links">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-            </div>
+            <p class="project-note"><i class="fas fa-lock" aria-hidden="true"></i> Internal work — details on request</p>
           </div>
         </div>
         <div class="project-card" data-aos="fade-up" data-aos-delay="300">
@@ -925,10 +1165,7 @@
               <span class="project-tag">Automation</span>
               <span class="project-tag">Customer Service</span>
             </div>
-            <div class="project-links">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-            </div>
+            <p class="project-note"><i class="fas fa-lock" aria-hidden="true"></i> Internal work — details on request</p>
           </div>
         </div>
         <!-- Optional: Add a card linking to all your spare-time projects on GitHub -->
@@ -942,7 +1179,7 @@
               Explore all my spare-time data science projects on GitHub.
             </p>
             <div class="project-links">
-              <a href="https://github.com/wandabwa2004/DS_Projects" target="_blank"><i class="fab fa-github"></i> View Projects</a>
+              <a href="https://github.com/wandabwa2004/DS_Projects" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Projects</a>
             </div>
           </div>
         </div>
@@ -954,63 +1191,159 @@
   <section id="articles" class="articles">
     <div class="container">
       <h2 class="section-title" data-aos="fade-right">Articles</h2>
+      <div class="article-filters" data-aos="fade-up" role="tablist" aria-label="Filter articles by topic">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-filter="agentic-ai" role="tab" aria-selected="false">Agentic AI</button>
+        <button class="filter-btn" data-filter="llm" role="tab" aria-selected="false">LLMs</button>
+        <button class="filter-btn" data-filter="data-science" role="tab" aria-selected="false">Data Science</button>
+        <button class="filter-btn" data-filter="analytics" role="tab" aria-selected="false">Analytics</button>
+        <button class="filter-btn" data-filter="optimisation" role="tab" aria-selected="false">Optimisation</button>
+        <button class="filter-btn" data-filter="others" role="tab" aria-selected="false">Others</button>
+      </div>
       <div class="articles-grid">
-        <div class="article-card" data-aos="fade-up" data-aos-delay="100">
+        <!-- Agentic AI -->
+        <div class="article-card" data-category="agentic-ai" data-aos="fade-up" data-aos-delay="100">
+          <span class="article-category">Agentic AI</span>
+          <h3>Creating a Personalized Safari Guide with Agentic AI and Text-to-Speech</h3>
+          <a href="https://medium.com/data-science-collective/creating-a-personalized-safari-guide-with-agentic-ai-and-text-to-speech-tts-343a7f354ff8" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+        <div class="article-card" data-category="agentic-ai" data-aos="fade-up" data-aos-delay="200">
+          <span class="article-category">Agentic AI</span>
+          <h3>What Agentic AI Actually Is: A SIM Replacement Use Case — Part 1</h3>
+          <a href="https://medium.com/data-science-collective/what-agentic-ai-actually-is-a-sim-replacement-use-case-part-1-b9f1672d68b5" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+        <div class="article-card" data-category="agentic-ai" data-aos="fade-up" data-aos-delay="300">
+          <span class="article-category">Agentic AI</span>
+          <h3>From Theory to Code: Building a SIM Swap Agent in LangGraph — Part 2</h3>
+          <a href="https://medium.com/data-science-collective/part-2-from-theory-to-code-building-a-sim-swap-agent-in-langgraph-7290f5699023" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+        <div class="article-card" data-category="agentic-ai" data-aos="fade-up" data-aos-delay="400">
+          <span class="article-category">Agentic AI</span>
           <h3>Optimizing Equipment Maintenance Planning with DeepSeek, Reasoning LLM and Agents (CrewAI)</h3>
-          <a href="https://hermanwandabwa.medium.com/optimizing-equipment-maintenance-planning-with-deepseek-reasoning-llm-and-agents-crewai-a063114f8bb6" target="_blank">Read on Medium</a>
+          <a href="https://hermanwandabwa.medium.com/optimizing-equipment-maintenance-planning-with-deepseek-reasoning-llm-and-agents-crewai-a063114f8bb6" target="_blank" rel="noopener noreferrer">Read on Medium</a>
         </div>
-        <div class="article-card" data-aos="fade-up" data-aos-delay="200">
-          <h3>Finetuning Llama 2 Model on SafariCom's Product-related FAQs</h3>
-          <a href="https://hermanwandabwa.medium.com/finetuning-llama-2-model-on-safaricoms-product-related-faqs-c9b226a43106" target="_blank">Read on Medium</a>
+
+        <!-- LLMs -->
+        <div class="article-card" data-category="llm" data-aos="fade-up" data-aos-delay="100">
+          <span class="article-category">LLMs</span>
+          <h3>From Data to Dialogue: Building a RAG Chatbot for Fitness</h3>
+          <a href="https://medium.com/data-science-collective/from-data-to-dialogue-development-of-a-retrieval-augmented-generation-rag-chatbot-for-fitness-b9fbaf818ace" target="_blank" rel="noopener noreferrer">Read on Medium</a>
         </div>
-        <div class="article-card" data-aos="fade-up" data-aos-delay="300">
-          <h3>Web Scraping Product-driven Question Answer Pairs</h3>
-          <a href="https://hermanwandabwa.medium.com/web-scraping-product-driven-question-answer-pairs-214988cdfed4" target="_blank">Read on Medium</a>
+        <div class="article-card" data-category="llm" data-aos="fade-up" data-aos-delay="200">
+          <span class="article-category">LLMs</span>
+          <h3>From Code to Coping: Inside an AI Chatbot Designed for Teen Well-being</h3>
+          <a href="https://medium.com/data-science-collective/from-code-to-coping-inside-an-ai-chatbot-designed-for-teen-well-being-4a0869a8fbc8" target="_blank" rel="noopener noreferrer">Read on Medium</a>
         </div>
-        <div class="article-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="article-card" data-category="llm" data-aos="fade-up" data-aos-delay="300">
+          <span class="article-category">LLMs</span>
+          <h3>Building a RAG System with MMR for Safaricom's Smart Assistant</h3>
+          <a href="https://medium.com/data-science-collective/building-a-rag-system-with-mmr-for-safaricoms-smart-assistant-1e9ba91b9bfe" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+        <div class="article-card" data-category="llm" data-aos="fade-up" data-aos-delay="400">
+          <span class="article-category">LLMs</span>
+          <h3>Finetuning Llama 2 on Safaricom's Product-related FAQs</h3>
+          <a href="https://hermanwandabwa.medium.com/finetuning-llama-2-model-on-safaricoms-product-related-faqs-c9b226a43106" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+        <div class="article-card" data-category="llm" data-aos="fade-up" data-aos-delay="100">
+          <span class="article-category">LLMs</span>
           <h3>GPT-powered Insights: Unleashing the Power of AI</h3>
-          <a href="https://hermanwandabwa.medium.com/gpt-powered-insights-unleashing-the-867084d0e4f9" target="_blank">Read on Medium</a>
+          <a href="https://hermanwandabwa.medium.com/gpt-powered-insights-unleashing-the-867084d0e4f9" target="_blank" rel="noopener noreferrer">Read on Medium</a>
         </div>
-        <div class="article-card" data-aos="fade-up" data-aos-delay="500">
+
+        <!-- Data Science -->
+        <div class="article-card" data-category="data-science" data-aos="fade-up" data-aos-delay="100">
+          <span class="article-category">Data Science</span>
+          <h3>Stop Guessing Who Will Leave: Predicting Customer Churn Before It Happens</h3>
+          <a href="https://medium.com/data-science-collective/stop-guessing-who-will-leave-how-i-would-predict-customer-churn-before-it-happens-300d34cbd13c" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+        <div class="article-card" data-category="data-science" data-aos="fade-up" data-aos-delay="200">
+          <span class="article-category">Data Science</span>
+          <h3>Stop Guessing What Works: Uplift Modelling for Churn Interventions</h3>
+          <a href="https://medium.com/data-science-collective/stop-guessing-what-works-how-id-use-uplift-modelling-to-target-churn-interventions-without-fancy-3e4230de2575" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+        <div class="article-card" data-category="data-science" data-aos="fade-up" data-aos-delay="300">
+          <span class="article-category">Data Science</span>
+          <h3>Stop Guessing Staffing Needs: Predicting Daily Museum Visitors — Part 1</h3>
+          <a href="https://medium.com/data-science-collective/stop-guessing-staffing-needs-predicting-daily-museum-visitors-before-they-arrive-part-1-336ac0ca4f60" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+        <div class="article-card" data-category="data-science" data-aos="fade-up" data-aos-delay="400">
+          <span class="article-category">Data Science</span>
+          <h3>Stop Guessing Staffing Needs: Predicting Daily Museum Visitors — Part 2</h3>
+          <a href="https://medium.com/data-science-collective/stop-guessing-staffing-needs-how-id-predict-daily-museum-visitors-before-they-arrive-part-2-760498e03c4f" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+        <div class="article-card" data-category="data-science" data-aos="fade-up" data-aos-delay="100">
+          <span class="article-category">Data Science</span>
+          <h3>Predicting Daily Patient Volume for a Melbourne Urgent Care Clinic</h3>
+          <a href="https://medium.com/data-science-collective/predicting-daily-patient-volume-for-a-melbourne-urgent-care-clinic-d4ca30007991" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+
+        <!-- Analytics -->
+        <div class="article-card" data-category="analytics" data-aos="fade-up" data-aos-delay="100">
+          <span class="article-category">Analytics</span>
+          <h3>Finding the Perfect Spot: WiFi Analytics for Premium Space Advertising</h3>
+          <a href="https://medium.com/data-science-collective/finding-the-perfect-spot-wifi-analytics-for-premium-space-advertising-b8470dd9181b" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+        <div class="article-card" data-category="analytics" data-aos="fade-up" data-aos-delay="200">
+          <span class="article-category">Analytics</span>
           <h3>Uncovering Patterns and Trends in Ausgrid Power Outage Data</h3>
-          <a href="https://hermanwandabwa.medium.com/uncovering-patterns-and-trends-in-ausgrid-power-outage-data-ec538d4f70f9" target="_blank">Read on Medium</a>
+          <a href="https://hermanwandabwa.medium.com/uncovering-patterns-and-trends-in-ausgrid-power-outage-data-ec538d4f70f9" target="_blank" rel="noopener noreferrer">Read on Medium</a>
         </div>
-        <div class="article-card" data-aos="fade-up" data-aos-delay="600">
-          <h3>Capacity Optimization in Freight Trains with Real Data</h3>
-          <a href="https://medium.com/towards-data-science/capacity-optimization-in-freight-trains-with-real-data-d21296e2b56" target="_blank">Read on Medium</a>
-        </div>
-        <div class="article-card" data-aos="fade-up" data-aos-delay="700">
-          <h3>Capacity Optimization in Freight Trains – Part 1</h3>
-          <a href="https://medium.com/towards-data-science/capacity-optimization-in-freight-trains-part-1-4918f35a6433" target="_blank">Read on Medium</a>
-        </div>
-        <div class="article-card" data-aos="fade-up" data-aos-delay="800">
-          <h3>Inside DP Rutos Social Network Engine – Part 1</h3>
-          <a href="https://hermanwandabwa.medium.com/inside-dp-rutos-social-network-engine-part-1-634851d02bfa" target="_blank">Read on Medium</a>
-        </div>
-        <div class="article-card" data-aos="fade-up" data-aos-delay="900">
+        <div class="article-card" data-category="analytics" data-aos="fade-up" data-aos-delay="300">
+          <span class="article-category">Analytics</span>
           <h3>Lukewarm Sentimental Footing for the Building Bridges Initiative in Kenya</h3>
-          <a href="https://medium.com/towards-data-science/lukewarm-sentimental-footing-for-the-building-bridges-initiative-bbi-in-kenya-f0ed3c5f070a" target="_blank">Read on Medium</a>
+          <a href="https://medium.com/towards-data-science/lukewarm-sentimental-footing-for-the-building-bridges-initiative-bbi-in-kenya-f0ed3c5f070a" target="_blank" rel="noopener noreferrer">Read on Medium</a>
         </div>
-        <div class="article-card" data-aos="fade-up" data-aos-delay="1000">
+        <div class="article-card" data-category="analytics" data-aos="fade-up" data-aos-delay="400">
+          <span class="article-category">Analytics</span>
           <h3>6 Kgs Lost in 31 Days of COVID-19 Lockdown: A Data Analytics Perspective</h3>
-          <a href="https://medium.com/swlh/6-kgs-lost-in-31-days-of-covid-19-lockdown-a-data-analytics-perspective-a0061e0689f2" target="_blank">Read on Medium</a>
+          <a href="https://medium.com/swlh/6-kgs-lost-in-31-days-of-covid-19-lockdown-a-data-analytics-perspective-a0061e0689f2" target="_blank" rel="noopener noreferrer">Read on Medium</a>
         </div>
-        <div class="article-card" data-aos="fade-up" data-aos-delay="1100">
+        <div class="article-card" data-category="analytics" data-aos="fade-up" data-aos-delay="100">
+          <span class="article-category">Analytics</span>
           <h3>We Are Just a Loquacious Lot (2019 Kenyan Social Beat)</h3>
-          <a href="https://hermanwandabwa.medium.com/we-are-just-a-loquacious-lot-2019-kenyan-social-beat-458938d5a066" target="_blank">Read on Medium</a>
+          <a href="https://hermanwandabwa.medium.com/we-are-just-a-loquacious-lot-2019-kenyan-social-beat-458938d5a066" target="_blank" rel="noopener noreferrer">Read on Medium</a>
         </div>
-        <div class="article-card" data-aos="fade-up" data-aos-delay="1200">
+        <div class="article-card" data-category="analytics" data-aos="fade-up" data-aos-delay="200">
+          <span class="article-category">Analytics</span>
           <h3>Kigali: The 2019 Happiness Capital</h3>
-          <a href="https://medium.com/towards-data-science/kigali-the-2019-happiness-capital-a0085dc1efc4" target="_blank">Read on Medium</a>
+          <a href="https://medium.com/towards-data-science/kigali-the-2019-happiness-capital-a0085dc1efc4" target="_blank" rel="noopener noreferrer">Read on Medium</a>
         </div>
-        <div class="article-card" data-aos="fade-up" data-aos-delay="1300">
+        <div class="article-card" data-category="analytics" data-aos="fade-up" data-aos-delay="300">
+          <span class="article-category">Analytics</span>
           <h3>Uhuru Kenyatta's 2019 State of the Nation Address: Most Positive</h3>
-          <a href="https://medium.com/towards-data-science/uhuru-kenyattas-2019-state-of-the-nation-address-most-positive-557d9cfb3f13" target="_blank">Read on Medium</a>
+          <a href="https://medium.com/towards-data-science/uhuru-kenyattas-2019-state-of-the-nation-address-most-positive-557d9cfb3f13" target="_blank" rel="noopener noreferrer">Read on Medium</a>
         </div>
-        <div class="article-card" data-aos="fade-up" data-aos-delay="1400">
+        <div class="article-card" data-category="analytics" data-aos="fade-up" data-aos-delay="400">
+          <span class="article-category">Analytics</span>
           <h3>Te Papa Tongarewa: Museum of New Zealand Sentimental Footing</h3>
-          <a href="https://medium.com/towards-data-science/te-papa-tongarewa-museum-of-new-zealand-sentimental-footing-d062e41e430f" target="_blank">Read on Medium</a>
+          <a href="https://medium.com/towards-data-science/te-papa-tongarewa-museum-of-new-zealand-sentimental-footing-d062e41e430f" target="_blank" rel="noopener noreferrer">Read on Medium</a>
         </div>
+
+        <!-- Optimisation -->
+        <div class="article-card" data-category="optimisation" data-aos="fade-up" data-aos-delay="100">
+          <span class="article-category">Optimisation</span>
+          <h3>Capacity Optimization in Freight Trains with Real Data</h3>
+          <a href="https://medium.com/towards-data-science/capacity-optimization-in-freight-trains-with-real-data-d21296e2b56" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+        <div class="article-card" data-category="optimisation" data-aos="fade-up" data-aos-delay="200">
+          <span class="article-category">Optimisation</span>
+          <h3>Capacity Optimization in Freight Trains — Part 1</h3>
+          <a href="https://medium.com/towards-data-science/capacity-optimization-in-freight-trains-part-1-4918f35a6433" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+
+        <!-- Others -->
+        <div class="article-card" data-category="others" data-aos="fade-up" data-aos-delay="100">
+          <span class="article-category">Others</span>
+          <h3>Web Scraping Product-driven Question Answer Pairs</h3>
+          <a href="https://hermanwandabwa.medium.com/web-scraping-product-driven-question-answer-pairs-214988cdfed4" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+        <div class="article-card" data-category="others" data-aos="fade-up" data-aos-delay="200">
+          <span class="article-category">Others</span>
+          <h3>Inside DP Ruto's Social Network Engine — Part 1</h3>
+          <a href="https://hermanwandabwa.medium.com/inside-dp-rutos-social-network-engine-part-1-634851d02bfa" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+
+        <p class="articles-empty" hidden>No articles in this category yet.</p>
       </div>
     </div>
   </section>
@@ -1019,30 +1352,52 @@
   <section id="publications" class="publications">
     <div class="container">
       <h2 class="section-title" data-aos="fade-right">Publications</h2>
+
+      <h3 class="publications-subhead" data-aos="fade-right">In progress</h3>
       <div class="publications-grid">
         <div class="publication-card" data-aos="fade-up" data-aos-delay="100">
-          <h3>A framework for designing learning analytics information systems</h3>
-          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0iEgEHYAAAAJ&citation_for_view=0iEgEHYAAAAJ:ufrVoPGSRksC" target="_blank">View on Google Scholar</a>
+          <span class="pub-status pub-status--review">Submitted · ICML 2026</span>
+          <h3>BPMN-to-ReAct: Token-Efficient Translation of Business Process Definitions into Agentic Applications</h3>
+          <p class="pub-citation">Wandabwa, H. (2026). Submitted to the International Conference on Machine Learning (ICML 2026).</p>
         </div>
         <div class="publication-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="pub-status">Applied research · Commonwealth Bank</span>
+          <h3>An Agentic AI Simulator, Evaluator and Mitigator for Vulnerable Customers</h3>
+          <p class="pub-citation">Wandabwa, H. (2026). Applied research, Commonwealth Bank.</p>
+        </div>
+      </div>
+
+      <h3 class="publications-subhead" data-aos="fade-right">Selected peer-reviewed</h3>
+      <div class="publications-grid">
+        <div class="publication-card" data-aos="fade-up" data-aos-delay="100">
           <h3>Topical affinity in short text microblogs</h3>
-          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0iEgEHYAAAAJ&citation_for_view=0iEgEHYAAAAJ:eQOLeE2rZwMC" target="_blank">View on Google Scholar</a>
+          <p class="pub-citation">Wandabwa, H., Naeem, M. A., Mirza, F., &amp; Pears, R. (2021). <em>Information Systems</em>, 96, 101662.</p>
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0iEgEHYAAAAJ&citation_for_view=0iEgEHYAAAAJ:eQOLeE2rZwMC" target="_blank" rel="noopener noreferrer">View on Google Scholar</a>
+        </div>
+        <div class="publication-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Multi-interest semantic changes over time in short-text microblogs</h3>
+          <p class="pub-citation">Wandabwa, H., Naeem, M. A., Mirza, F., &amp; Pears, R. (2021). <em>Knowledge-Based Systems</em>, 228, 107249.</p>
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0iEgEHYAAAAJ&citation_for_view=0iEgEHYAAAAJ:LkGwnXOMwfcC" target="_blank" rel="noopener noreferrer">View on Google Scholar</a>
         </div>
         <div class="publication-card" data-aos="fade-up" data-aos-delay="300">
-          <h3>Text categorization via attribute distance weighted k-nearest neighbor classification</h3>
-          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0iEgEHYAAAAJ&citation_for_view=0iEgEHYAAAAJ:9yKSN-GCB0IC" target="_blank">View on Google Scholar</a>
+          <h3>A Framework for Designing Learning Analytics Information Systems</h3>
+          <p class="pub-citation">Nguyen, A., Wandabwa, H., Rasco, A., &amp; Le, L. A. (2021). <em>Hawaii International Conference on System Sciences (HICSS)</em>, 1–10.</p>
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0iEgEHYAAAAJ&citation_for_view=0iEgEHYAAAAJ:ufrVoPGSRksC" target="_blank" rel="noopener noreferrer">View on Google Scholar</a>
         </div>
         <div class="publication-card" data-aos="fade-up" data-aos-delay="400">
-          <h3>Multi-interest semantic changes over time in short-text microblogs</h3>
-          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0iEgEHYAAAAJ&citation_for_view=0iEgEHYAAAAJ:LkGwnXOMwfcC" target="_blank">View on Google Scholar</a>
+          <h3>Multi-interest User Profiling in Short Text Microblogs</h3>
+          <p class="pub-citation">Wandabwa, H., Naeem, M. A., Mirza, F., Pears, R., &amp; Nguyen, A. (2020). <em>DESRIST 2020</em>, 154–168.</p>
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0iEgEHYAAAAJ&citation_for_view=0iEgEHYAAAAJ:WF5omc3nYNoC" target="_blank" rel="noopener noreferrer">View on Google Scholar</a>
         </div>
-        <div class="publication-card" data-aos="fade-up" data-aos-delay="500">
-          <h3>Multi-interest user profiling in short text microblogs</h3>
-          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0iEgEHYAAAAJ&citation_for_view=0iEgEHYAAAAJ:WF5omc3nYNoC" target="_blank">View on Google Scholar</a>
+        <div class="publication-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Text categorization via attribute distance weighted k-nearest neighbor classification</h3>
+          <p class="pub-citation">Wandabwa, H. et al.</p>
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0iEgEHYAAAAJ&citation_for_view=0iEgEHYAAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener noreferrer">View on Google Scholar</a>
         </div>
-        <div class="publication-card" data-aos="fade-up" data-aos-delay="600">
+        <div class="publication-card" data-aos="fade-up" data-aos-delay="200">
           <h3>A metamodel enabled approach for discovery of coherent topics in short text microblogs</h3>
-          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0iEgEHYAAAAJ&citation_for_view=0iEgEHYAAAAJ:2osOgNQ5qMEC" target="_blank">View on Google Scholar</a>
+          <p class="pub-citation">Wandabwa, H. et al.</p>
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0iEgEHYAAAAJ&citation_for_view=0iEgEHYAAAAJ:2osOgNQ5qMEC" target="_blank" rel="noopener noreferrer">View on Google Scholar</a>
         </div>
       </div>
     </div>
@@ -1053,34 +1408,26 @@
     <div class="container">
       <h2 class="section-title" data-aos="fade-right">Contact Me</h2>
       <div class="contact-content">
-        <form class="contact-form" data-aos="fade-right">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-filled">Send Message</button>
-        </form>
+        <div class="contact-cta" data-aos="fade-right">
+          <h3>Let's talk</h3>
+          <p>Always happy to chat about AI research, advisory work on Responsible AI / GenAI, or collaborating on interesting problems.</p>
+          <a href="mailto:wandabwa2004@gmail.com?subject=Hello%20Herman" class="btn btn-filled">
+            <i class="fas fa-envelope" aria-hidden="true"></i> Get in touch
+          </a>
+        </div>
         <div class="contact-info" data-aos="fade-left">
           <h3>Get In Touch</h3>
           <div class="contact-info-item">
-            <i class="fas fa-envelope"></i>
-            <span>herman.wandabwa@gmail.com</span>
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:wandabwa2004@gmail.com" aria-label="Email Herman">Email me</a>
           </div>
           <div class="contact-info-item">
             <i class="fas fa-map-marker-alt"></i>
             <span>Melbourne, Australia</span>
           </div>
           <div class="social-icons">
-            <a href="https://github.com/wandabwa2004/DS_Projects" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/wandabwa2004/DS_Projects" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/wandabwaherman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
           </div>
           <div class="map">
             <iframe
@@ -1101,19 +1448,19 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Herman Wandabwa. All Rights Reserved.</p>
+      <p>&copy; <span id="footer-year">2026</span> Herman Wandabwa. All Rights Reserved.</p>
       <div class="social-icons">
-        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/wandabwa2004/DS_Projects" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:herman.wandabwa@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/wandabwaherman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://github.com/wandabwa2004/DS_Projects" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="mailto:wandabwa2004@gmail.com" aria-label="Email Herman"><i class="fas fa-envelope" aria-hidden="true"></i></a>
       </div>
     </div>
   </footer>
 
   <!-- Back to Top Button -->
-  <div class="back-to-top">
-    <i class="fas fa-arrow-up"></i>
-  </div>
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -1130,11 +1477,12 @@
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      const isActive = navLinks.classList.toggle('active');
       menuToggle.classList.toggle('active');
-      menuToggle.innerHTML = menuToggle.classList.contains('active')
-        ? '<i class="fas fa-times"></i>'
-        : '<i class="fas fa-bars"></i>';
+      menuToggle.setAttribute('aria-expanded', String(isActive));
+      menuToggle.innerHTML = isActive
+        ? '<i class="fas fa-times" aria-hidden="true"></i>'
+        : '<i class="fas fa-bars" aria-hidden="true"></i>';
     });
 
     // Theme Toggle
@@ -1143,19 +1491,33 @@
     themeToggle.addEventListener('click', () => {
       body.classList.toggle('light-mode');
       themeToggle.innerHTML = body.classList.contains('light-mode')
-        ? '<i class="fas fa-sun"></i>'
-        : '<i class="fas fa-moon"></i>';
+        ? '<i class="fas fa-sun" aria-hidden="true"></i>'
+        : '<i class="fas fa-moon" aria-hidden="true"></i>';
     });
 
-    // Download Resume (ensure Resume.pdf is in your project directory)
-    document.getElementById('download-resume').addEventListener('click', function (e) {
-      e.preventDefault();
-      let downloadLink = document.createElement('a');
-      downloadLink.href = 'Resume.pdf';
-      downloadLink.download = 'Herman_Wandabwa_Resume.pdf';
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
+    // Footer year
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // Article category filters
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const articleCards = document.querySelectorAll('.article-card');
+    const articlesEmpty = document.querySelector('.articles-empty');
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        filterButtons.forEach((b) => {
+          const isActive = b === btn;
+          b.classList.toggle('active', isActive);
+          b.setAttribute('aria-selected', String(isActive));
+        });
+        let visibleCount = 0;
+        articleCards.forEach((card) => {
+          const match = filter === 'all' || card.dataset.category === filter;
+          card.classList.toggle('is-hidden', !match);
+          if (match) visibleCount++;
+        });
+        if (articlesEmpty) articlesEmpty.hidden = visibleCount > 0;
+      });
     });
 
     // Back to Top Button
@@ -1171,14 +1533,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Contact Form Submission (placeholder)
-    const contactForm = document.querySelector('.contact-form');
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      alert(`Thank you ${name} for your message! (This is a placeholder for form submission.)`);
-      contactForm.reset();
-    });
   </script>
 </body>
 </html>
