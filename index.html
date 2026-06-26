@@ -12,16 +12,18 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Herman Wandabwa | Senior AI Scientist — GenAI & Agentic Systems" />
   <meta property="og:description" content="Senior AI Scientist specialising in Generative AI and Agentic Systems. 7+ years translating data science and AI research into production-grade solutions." />
-  <meta property="og:image" content="https://wandabwa2004.github.io/herman.jpg" />
+  <meta property="og:image" content="https://wandabwa2004.github.io/og-image.png" />
   <meta property="og:url" content="https://wandabwa2004.github.io/" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Herman Wandabwa | Senior AI Scientist — GenAI & Agentic Systems" />
   <meta name="twitter:description" content="Senior AI Scientist specialising in Generative AI and Agentic Systems. 7+ years translating data science and AI research into production-grade solutions." />
-  <meta name="twitter:image" content="https://wandabwa2004.github.io/herman.jpg" />
+  <meta name="twitter:image" content="https://wandabwa2004.github.io/og-image.png" />
 
-  <link rel="icon" type="image/jpeg" href="herman.jpg" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" type="image/jpeg" href="herman.jpg" />
+  <link rel="apple-touch-icon" href="herman.jpg" />
 
   <!-- Fonts & libraries -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -856,7 +858,25 @@
         grid-template-columns: 1fr;
       }
     }
+    /* Respect users who prefer reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+      .profile-img-bg { animation: none !important; }
+      [data-aos] { opacity: 1 !important; transform: none !important; }
+    }
   </style>
+  <!--
+    Analytics (optional, privacy-friendly — no cookie banner required).
+    To enable: create a free/paid account at https://plausible.io, add the
+    domain "wandabwa2004.github.io", then uncomment the line below.
+    Prefer Google Analytics 4 instead? Swap this for your GA4 gtag snippet.
+  -->
+  <!-- <script defer data-domain="wandabwa2004.github.io" src="https://plausible.io/js/script.js"></script> -->
 </head>
 <body>
   <!-- Header -->
@@ -894,7 +914,7 @@
           </div>
           <div class="social-icons">
             <a href="https://www.linkedin.com/in/wandabwaherman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-            <a href="https://github.com/wandabwa2004/DS_Projects" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="https://github.com/wandabwa2004" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
             <a href="mailto:wandabwa2004@gmail.com" aria-label="Email Herman"><i class="fas fa-envelope" aria-hidden="true"></i></a>
           </div>
         </div>
@@ -913,7 +933,7 @@
       <div class="about-content">
         <div class="about-text" data-aos="fade-right" data-aos-duration="1000">
           <p>
-            Senior AI Scientist with a PhD specialising in generative AI and agentic systems, with 7+ years translating research into production. Deep experience in LLM fine-tuning (Qwen, LLaMA), retrieval-augmented generation, and ReAct-style agent orchestration — backed by a strong applied research track record.
+            Senior AI Scientist with a PhD specialising in generative AI and agentic systems, with 7+ years translating research into production. Deep experience in LLM fine-tuning (Qwen, LLaMA), retrieval-augmented generation, and ReAct-style agent orchestration — backed by a strong applied research track record, including a paper currently under review at ICML 2026.
           </p>
           <p>
             Rigorous experimental design and statistical validation paired with end-to-end MLOps delivery across financial services, insurance and logistics. Effective communicator with senior stakeholders and a committed mentor of junior data scientists.
@@ -1117,69 +1137,134 @@
     <div class="container">
       <h2 class="section-title" data-aos="fade-right">Projects</h2>
       <div class="projects-grid">
+        <!-- Flagship research project -->
         <div class="project-card" data-aos="fade-up" data-aos-delay="100">
           <div class="project-img">
-            <i class="fas fa-chart-pie"></i>
+            <i class="fas fa-diagram-project"></i>
           </div>
           <div class="project-content">
-            <h3>LLM Integration & Monitoring</h3>
+            <h3>BPMN-to-ReAct: Architect Agent</h3>
             <p>
-              Developed a robust suite for monitoring large language models, ensuring Responsible AI compliance and processing over 6000 documents.
+              A LangGraph "Architect Agent" that ingests raw BPMN process definitions and translates them into functional ReAct agentic applications — achieving <strong>~40% lower input/output token usage</strong> than Roo Code, Cline, AutoGen, MetaGPT and AFLOW under matched conditions.
             </p>
             <div class="project-tags">
-              <span class="project-tag">LLM</span>
-              <span class="project-tag">Monitoring</span>
+              <span class="project-tag">LangGraph</span>
+              <span class="project-tag">ReAct</span>
+              <span class="project-tag">Agentic AI</span>
+              <span class="project-tag">Research</span>
+            </div>
+            <p class="project-note"><i class="fas fa-flask" aria-hidden="true"></i> Paper under review · ICML 2026</p>
+          </div>
+        </div>
+        <!-- Internal applied research -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <div class="project-content">
+            <h3>Agentic AI Simulator, Evaluator &amp; Mitigator</h3>
+            <p>
+              An end-to-end framework used pre-deployment to diagnose failure modes, assess reliability and target performance improvements for agents serving vulnerable customer populations — informing internal Responsible AI governance.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Agentic Evaluation</span>
               <span class="project-tag">Responsible AI</span>
+              <span class="project-tag">LLM</span>
             </div>
             <p class="project-note"><i class="fas fa-lock" aria-hidden="true"></i> Internal work — details on request</p>
           </div>
         </div>
+        <!-- Public: multi-agent deep research -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-img">
+            <i class="fas fa-magnifying-glass-chart"></i>
+          </div>
+          <div class="project-content">
+            <h3>Multi-Agent Deep Research Agent</h3>
+            <p>
+              A multi-agent research system in LangGraph that plans, searches and synthesises sources into structured deep-research reports — with an accompanying technical write-up and code.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">LangGraph</span>
+              <span class="project-tag">Multi-Agent</span>
+              <span class="project-tag">RAG</span>
+            </div>
+            <div class="project-links">
+              <a href="https://medium.com/data-science-collective/building-a-multi-agent-deep-research-agent-with-langgraph-203547b5fb12" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open" aria-hidden="true"></i> Read write-up</a>
+            </div>
+          </div>
+        </div>
+        <!-- Public: safari guide agent -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img">
+            <i class="fas fa-route"></i>
+          </div>
+          <div class="project-content">
+            <h3>Personalised Safari Guide — Agentic AI + TTS</h3>
+            <p>
+              An agentic guide that builds personalised safari itineraries and narrates them with text-to-speech, combining tool use, orchestration and generated audio into a single experience.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Agentic AI</span>
+              <span class="project-tag">Text-to-Speech</span>
+              <span class="project-tag">LLM</span>
+            </div>
+            <div class="project-links">
+              <a href="https://medium.com/data-science-collective/creating-a-personalized-safari-guide-with-agentic-ai-and-text-to-speech-tts-343a7f354ff8" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open" aria-hidden="true"></i> Read write-up</a>
+            </div>
+          </div>
+        </div>
+        <!-- Public: SIM-swap agent -->
         <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img">
+            <i class="fas fa-sim-card"></i>
+          </div>
+          <div class="project-content">
+            <h3>SIM-Swap Agent in LangGraph</h3>
+            <p>
+              A worked example of replacing a rules-based SIM-swap workflow with a ReAct agent — from the concept and design (Part 1) to a working LangGraph implementation with code (Part 2).
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">LangGraph</span>
+              <span class="project-tag">ReAct</span>
+              <span class="project-tag">Agents</span>
+            </div>
+            <div class="project-links">
+              <a href="https://medium.com/data-science-collective/what-agentic-ai-actually-is-a-sim-replacement-use-case-part-1-b9f1672d68b5" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open" aria-hidden="true"></i> Part 1</a>
+              <a href="https://medium.com/data-science-collective/part-2-from-theory-to-code-building-a-sim-swap-agent-in-langgraph-7290f5699023" target="_blank" rel="noopener noreferrer"><i class="fas fa-code" aria-hidden="true"></i> Part 2</a>
+            </div>
+          </div>
+        </div>
+        <!-- Internal: production ML consolidated -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
           <div class="project-img">
             <i class="fas fa-chart-line"></i>
           </div>
           <div class="project-content">
-            <h3>Advanced Data Modeling</h3>
+            <h3>Production ML &amp; Customer Analytics</h3>
             <p>
-              Engineered predictive models for home loan refinancing and council leads expansion, unlocking $500M in potential revenue.
+              Propensity, uplift and churn models in production — including an <strong>11% home-loan retention uplift</strong> across 500K+ customers and a fraud-queue optimisation projecting <strong>$10M</strong> in annual savings.
             </p>
             <div class="project-tags">
-              <span class="project-tag">Predictive Modeling</span>
-              <span class="project-tag">NLP</span>
-              <span class="project-tag">Analytics</span>
+              <span class="project-tag">Predictive Modelling</span>
+              <span class="project-tag">Uplift</span>
+              <span class="project-tag">MLOps</span>
             </div>
             <p class="project-note"><i class="fas fa-lock" aria-hidden="true"></i> Internal work — details on request</p>
           </div>
         </div>
-        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="project-img">
-            <i class="fas fa-comments"></i>
-          </div>
-          <div class="project-content">
-            <h3>Generative AI for Customer Service</h3>
-            <p>
-              Pioneered the adoption of generative AI to automate customer service processes, improving operational efficiency and reducing churn.
-            </p>
-            <div class="project-tags">
-              <span class="project-tag">Generative AI</span>
-              <span class="project-tag">Automation</span>
-              <span class="project-tag">Customer Service</span>
-            </div>
-            <p class="project-note"><i class="fas fa-lock" aria-hidden="true"></i> Internal work — details on request</p>
-          </div>
-        </div>
-        <!-- Optional: Add a card linking to all your spare-time projects on GitHub -->
-        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+        <!-- Link to all GitHub projects -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
           <div class="project-img">
             <i class="fab fa-github"></i>
           </div>
           <div class="project-content">
-            <h3>DS Projects on GitHub</h3>
+            <h3>More Projects on GitHub</h3>
             <p>
-              Explore all my spare-time data science projects on GitHub.
+              Explore the full collection of data science and AI projects, notebooks and experiments on GitHub.
             </p>
             <div class="project-links">
-              <a href="https://github.com/wandabwa2004/DS_Projects" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Projects</a>
+              <a href="https://github.com/wandabwa2004/DS_Projects" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> View Projects</a>
             </div>
           </div>
         </div>
@@ -1221,6 +1306,11 @@
           <span class="article-category">Agentic AI</span>
           <h3>Optimizing Equipment Maintenance Planning with DeepSeek, Reasoning LLM and Agents (CrewAI)</h3>
           <a href="https://hermanwandabwa.medium.com/optimizing-equipment-maintenance-planning-with-deepseek-reasoning-llm-and-agents-crewai-a063114f8bb6" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+        <div class="article-card" data-category="agentic-ai" data-aos="fade-up" data-aos-delay="100">
+          <span class="article-category">Agentic AI</span>
+          <h3>Building a Multi-Agent Deep Research Agent with LangGraph</h3>
+          <a href="https://medium.com/data-science-collective/building-a-multi-agent-deep-research-agent-with-langgraph-203547b5fb12" target="_blank" rel="noopener noreferrer">Read on Medium</a>
         </div>
 
         <!-- LLMs -->
@@ -1275,6 +1365,11 @@
           <span class="article-category">Data Science</span>
           <h3>Predicting Daily Patient Volume for a Melbourne Urgent Care Clinic</h3>
           <a href="https://medium.com/data-science-collective/predicting-daily-patient-volume-for-a-melbourne-urgent-care-clinic-d4ca30007991" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+        </div>
+        <div class="article-card" data-category="data-science" data-aos="fade-up" data-aos-delay="200">
+          <span class="article-category">Data Science</span>
+          <h3>Turning Patient Number Predictions into Staffing Numbers — Without Fancy AI</h3>
+          <a href="https://medium.com/data-science-collective/turning-patient-number-predictions-into-staffing-numbers-without-fancy-ai-05b8f5da3d0e" target="_blank" rel="noopener noreferrer">Read on Medium</a>
         </div>
 
         <!-- Analytics -->
@@ -1365,6 +1460,11 @@
           <h3>An Agentic AI Simulator, Evaluator and Mitigator for Vulnerable Customers</h3>
           <p class="pub-citation">Wandabwa, H. (2026). Applied research, Commonwealth Bank.</p>
         </div>
+        <div class="publication-card" data-aos="fade-up" data-aos-delay="300">
+          <span class="pub-status">Applied research · Commonwealth Bank</span>
+          <h3>Collaboration Mechanisms in Multi-Agent Systems</h3>
+          <p class="pub-citation">Wandabwa, H. (2026). Applied research, Commonwealth Bank. Investigating coordination strategies and emergent collaboration behaviours across multi-agent architectures; preliminary results obtained.</p>
+        </div>
       </div>
 
       <h3 class="publications-subhead" data-aos="fade-right">Selected peer-reviewed</h3>
@@ -1416,7 +1516,7 @@
           </a>
         </div>
         <div class="contact-info" data-aos="fade-left">
-          <h3>Get In Touch</h3>
+          <h3>Find me online</h3>
           <div class="contact-info-item">
             <i class="fas fa-envelope" aria-hidden="true"></i>
             <a href="mailto:wandabwa2004@gmail.com" aria-label="Email Herman">Email me</a>
@@ -1426,7 +1526,7 @@
             <span>Melbourne, Australia</span>
           </div>
           <div class="social-icons">
-            <a href="https://github.com/wandabwa2004/DS_Projects" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="https://github.com/wandabwa2004" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/in/wandabwaherman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
           </div>
           <div class="map">
@@ -1451,7 +1551,7 @@
       <p>&copy; <span id="footer-year">2026</span> Herman Wandabwa. All Rights Reserved.</p>
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/wandabwaherman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-        <a href="https://github.com/wandabwa2004/DS_Projects" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="https://github.com/wandabwa2004" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
         <a href="mailto:wandabwa2004@gmail.com" aria-label="Email Herman"><i class="fas fa-envelope" aria-hidden="true"></i></a>
       </div>
     </div>
@@ -1465,12 +1565,14 @@
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    // Initialize AOS
+    // Initialize AOS (respect reduced-motion preference)
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     AOS.init({
       duration: 800,
       easing: 'ease-in-out',
       once: true,
-      mirror: false
+      mirror: false,
+      disable: prefersReducedMotion
     });
 
     // Menu Toggle
